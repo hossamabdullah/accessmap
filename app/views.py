@@ -22,3 +22,16 @@ class UserService(Resource):
         args = self.parser.parse_args()
         id = args["keyword"]
         return ("user id = "+id), 200
+
+@api.route('/place', endPoint='PlaceApi')
+class PlaceService(Resource):
+
+    @api.doc(params={'id':'id of the user to search on'})
+    def get(self):
+        self.parser = reqparse.RequestParser()
+        self.parser.add_argument('id', required=True, help="keyword is required")
+        args = self.parser.parse_args()
+        id = args["keyword"]
+        return ("user id = "+id), 200
+
+    

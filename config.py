@@ -11,5 +11,12 @@ DELETE_SUCCESS = "Item deleted successfully"
 
 STATUS = ["available", "pending", "sold"]
 
-DATABASE_URI = "mongodb://localhost:27017/petdb"
+DATABASE_URI = "mysql://localhost:3306/mydb"
+
+DB_CONFIG = {
+  'user': 'root',
+  'password': '',
+  'host': '127.0.0.1',
+  'database': 'mydb'
+}
 
