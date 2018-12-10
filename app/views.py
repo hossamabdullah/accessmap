@@ -12,7 +12,7 @@ api = Api(app, version='1.0', title='Access Map API',
 
 # from app.Utils import Util
 
-@api.route('/user', endpoint='UserApi')
+@api.route('/user')
 class UserService(Resource):
 
     @api.doc(params={'id':'id of the user to search on'})
@@ -23,7 +23,7 @@ class UserService(Resource):
         id = args["keyword"]
         return ("user id = "+id), 200
 
-@api.route('/place', endPoint='PlaceApi')
+@api.route('/place')
 class PlaceService(Resource):
 
     @api.doc(params={'id':'id of the place to search on'})
@@ -35,7 +35,7 @@ class PlaceService(Resource):
         return ("user id = "+id), 200
 
 
-@api.route('/review', endPoint='ReviewApi')
+@api.route('/review')
 class ReviewService(Resource):
 
     @api.doc(params={'id':'id of the review to search on'})
